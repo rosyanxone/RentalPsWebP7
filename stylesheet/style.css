@@ -1,0 +1,1178 @@
+@import url(//db.onlinewebfonts.com/c/213e56f9ea368890b9d2da0577e49dab?family=Zona+Pro);
+@font-face {font-family: "Zona Pro"; src: url("//db.onlinewebfonts.com/t/213e56f9ea368890b9d2da0577e49dab.eot"); src: url("//db.onlinewebfonts.com/t/213e56f9ea368890b9d2da0577e49dab.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/213e56f9ea368890b9d2da0577e49dab.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/213e56f9ea368890b9d2da0577e49dab.woff") format("woff"), url("//db.onlinewebfonts.com/t/213e56f9ea368890b9d2da0577e49dab.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/213e56f9ea368890b9d2da0577e49dab.svg#Zona Pro") format("svg"); }
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('http://fonts.cdnfonts.com/css/segoe-ui-4?styles=18006,18004');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-color: white;
+    color: black;
+  }
+
+/* dark mode switch */
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+
+/* kebutuhan dark mode */
+.mode-bg, .mode-text, .mode-img {
+    transition: 0.5s;
+}
+
+.dark-bg {
+    transition: 0.5s;
+    background-color: black !important;
+}
+
+.light-text {
+    transition: 0.5s;
+    color: white !important;
+}
+
+.light-img {
+    transition: 0.5s;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.light-border {
+    border-bottom: white solid 3px !important;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    color: black;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.logo a {
+    font-family: Viga;
+    letter-spacing: 3px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #383d41;
+}
+
+nav ul li a:hover {
+    transition: 0.1s;
+    color: black;
+	border-bottom: 3px solid #091353;
+}
+
+.logout-btn a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #0170CD;
+    padding: 8px 10px;
+    border-radius: 7px;
+    transition: 0.8s;
+}
+
+.logout-btn a:hover {
+    background-color: rgb(70, 34, 228);
+    transition: 0.8s;
+}
+/* HEADER */
+
+/* main section */
+header {
+    background-image: url(../img/background/header-3.jpg);
+    background-size: cover;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    padding: 70px 70px 50px 70px;
+}
+
+.header-item-left {
+    padding: 10px;
+    flex: 50%;
+    text-align: left;
+}
+
+.header-item-left h1 {
+    padding-top: 80px;
+    color: white;
+    text-shadow: 0 0 15px #5558d6 ;
+    font-family: 'Zona Pro', sans-serif;
+}
+
+.header-item-left p {
+    font-size: 14px;
+    color: white;
+    padding-right: 25%;
+    margin: 10px 0;
+}
+
+.rent-btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	padding: 9px 50px;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 15px;
+	color: #fff;
+	background-color: #0170cd;
+    border: 1px solid #0170cd;
+    transition: 0.8s;
+}
+
+.rent-btn:hover {
+    transition: 0.8s;
+    cursor: pointer;
+    background-color: #5558d6;
+    color: #fff;
+    border: 1px solid #5558d6;
+}
+
+.play-btn {
+	display: inline-block;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #fff;
+	padding: 9px 70px;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.8s;
+}
+
+.play-btn:hover {
+    transition: 0.8s;
+    cursor: pointer;
+	background-color: #fff;
+    color: black;
+}
+
+.header-item-left a {
+    text-decoration: none;
+}
+
+.header-item-left button {
+    margin-bottom: 20px;
+}
+
+.header-item-left h4 {
+    font-size: 16px;
+    color: white;
+    font-weight: lighter;
+}
+
+.header-item-left img {
+    width: 400px;
+}
+
+.header-item-right {
+    padding: 10px;
+    flex: 50%;
+}
+
+.img-gif {
+    height: 80vh;
+}
+
+/* price section */
+.price-container {
+    padding: 80px;
+    padding-bottom: 0;
+}
+
+.price-container h3 {
+    font-family: 'Segoe UI 700', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+
+.price-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+.table thead {
+    border-bottom: black solid 3px;
+}
+
+thead tr th {
+    text-align: left;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: var(#212529);
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-hover-color: var(#212529);
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(#000);
+    vertical-align: top;
+    border-color: var(#373b3e);
+}
+
+.table > :not(caption) > * > * {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.table > tbody {
+    vertical-align: inherit;
+}
+
+.table > thead {
+    vertical-align: bottom;
+}
+
+.table > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+    color: var(--bs-table-striped-color);
+}
+
+.price-table table > tbody > tr:hover > *,
+.games-table table > tbody > tr:hover > *,
+.consoles-table table > tbody > tr:hover > * {
+    --bs-table-accent-bg: var(--bs-table-hover-bg);
+    color: var(--bs-table-hover-color);
+}
+
+
+/* MAIN SECTION */
+/* about */
+.about-container {
+    padding: 70px;
+}
+
+.about-title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Zona Pro', sans-serif;
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    font-size: auto;
+    text-align: center;
+}
+
+.about-item-left {
+    padding-right: 2%;
+    flex: 50%;
+    text-align: left;
+}
+
+.about-item-right {
+    padding-left: 2%;
+    flex: 50%;
+    text-align: right;
+}
+
+/* partners */
+.partners-container {
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../img/service/ps5-bg.png);
+    background-size: cover;
+}
+
+.partners-container h3 {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.content-img {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content-img img {
+    height: 70px;
+}
+
+
+/* service */
+.service-container {
+    background-color: #eee;
+    padding: 90px;
+}
+
+.service-container h3 {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.service-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-panel {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 240px;
+    height: 250px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    margin: 0 10.5px;
+}
+
+.card-panel img {
+    height: 60px;
+}
+
+.card-panel h4 {
+    font-size: 35px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.card-panel p {
+    font-size: 12px;
+}
+
+
+/* RENT SECTION */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    font-size: 12pt;
+    color: #2A293E;
+    background: #F2F2F2;
+    padding-bottom: 200px;
+}
+
+.form-container h3 {
+    font-family: 'Segoe UI 700', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+}
+
+.form-rental {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 700px;
+    height: auto;
+    padding: 50px 100px;
+    margin: 0 10.5px;
+}
+
+label, .inputan, textarea, select {
+    display: block;
+    width: 500px;
+    font-size: 12pt;
+    line-height: 24pt;
+}
+
+input, select {
+    margin-bottom: 24pt;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.console-type {
+    display: flex;
+}
+
+.console {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+}
+
+.console label {
+    padding: 0 5px;
+}
+
+.radio {
+    margin-bottom: 0;
+}
+
+.group label {
+    width: 50px;
+}
+
+.console-group {
+    padding: 5px 0;
+}
+
+.console-group select {
+    width: 450px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.game-img {
+    padding-top: 10px;
+}
+
+.input-img {
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+em {
+    color: #f45702;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    background: #fff;
+    padding-left: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border: 1px solid #6bd4b1;
+}
+
+.submit-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* END RENT SECTION */
+
+
+/* STRUK SECTION */
+.struk-container {
+    padding: 100px;
+    background-color: #eee;
+    /* height: 700px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bills {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 400px;
+    position: relative;
+    align-items: center;
+    padding: 24px;
+    margin: 0 10.5px;
+}
+
+.bills-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.bills h3 {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+} 
+
+.method img{
+    height: 25px;
+}
+
+.success-btn {
+    padding-top: 30px;
+    text-align: right;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #29A744;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+/* END STRUCK SECTION */
+
+
+/* GAME SECTION */
+.daftar-table {
+    padding: 70px;
+}
+
+table, tr, th, td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.daftar-table h3 {
+    font-family: 'Segoe UI 700', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: black;
+    padding: 20px 0;
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.add-game {
+    background-color: #0170cd;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.add-game:hover {
+    background-color: #005194;
+}
+
+.search-container {
+    padding: 5px 0;
+}
+
+.search {
+    height: 40px;
+    margin: 0;
+}
+
+button.search {
+    padding: 5px 15px;
+    background-color: #73D6B5;
+    border: 0;
+    border-radius: 3px;
+    color: black;
+    transition: 0.5s;
+}
+button.search:hover {
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+
+input.search:hover {
+    transition: 0.5s;
+    border: 1px solid #73D6B5;
+}
+
+table.games {
+    margin: 15px 0;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-action {
+    padding: 10px;
+    border-radius: 6px;
+    margin: 5px 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.edit-action {
+    background-color: rgb(255, 217, 0);
+}
+
+.edit-action:hover,
+.update-btn:hover {
+    background-color: rgb(212, 183, 18);
+    cursor: pointer;
+}
+
+.del-action {
+    background-color: red;
+}
+
+.games-content td {
+    text-align: center;
+    vertical-align: middle;
+}
+/* END GAME SECTION */
+
+
+/* CREATE GAME */
+section#create-game {
+    background-image: url(../img/background/img-bg-1.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0; 
+}
+
+.form-game {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 700px;
+    height: 90%;
+    padding: 35px 100px;
+    margin: 0 10.5px;
+}
+
+.form-rental,
+.form-game {
+    margin: 20px 0;
+}
+
+.games-box {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+}
+
+.games-box label {
+    padding: 0 5px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    width: 180px;
+}
+
+.brand input {
+    margin: 5px 10px;
+}
+
+.create-btn {
+    margin-top: 10px;
+    background-color: #0170cd;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 0 none transparent;
+}
+
+.create-btn:hover {
+    background-color: #005194;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    margin-top: 10px;
+    background-color: red;
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 0 none transparent;
+}
+
+.cancel-btn:hover,
+.del-action:hover {
+    background-color: #c00202;
+    cursor: pointer;
+}
+/* END CREATE GAME */
+
+
+/* UPDATE GAME */
+section#update-game {
+    background-image: url(../img/background/img-bg-2.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+}
+
+.update-btn {
+    margin-top: 10px;
+    background-color: rgb(255, 217, 0);
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 0 none transparent;
+}
+/* END UPDATE GAME */
+
+
+/* FOOTER */
+footer {
+    height: 100%;
+	background-color: #383d41;
+    padding: 120px 120px 30px 120px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Zona Pro', sans-serif;
+    font-size: 40px;
+}
+
+.footer-contact-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* social media logo */
+.circle-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.circle {
+    margin-right: 9px;
+    width: 40px;
+    padding: 5px 10px 3px 6px;
+    display: flex;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+.circle.ig:hover {
+  background-color: rgb(225,48,108);
+  border: 2px solid rgb(225,48,108);
+  transition: 0.5s;
+  cursor: pointer;  
+}
+.circle.fb:hover {
+  background-color: rgb(58,89,152);
+  border: 2px solid rgb(58,89,152);
+  transition: 0.5s;
+  cursor: pointer;  
+}
+.circle.wa:hover {
+  background-color: rgb(0,231,119);
+  border: 2px solid rgb(0,231,119);
+  transition: 0.5s;
+  cursor: pointer;  
+}
+.circle.tw:hover {
+  background-color: rgb(70,193,246);
+  border: 2px solid rgb(70,193,246);
+  transition: 0.5s;
+  cursor: pointer;  
+}
+
+.circle a {
+    text-decoration: none;
+}
+
+.circle img {
+  width: 25px;
+  border-radius: 10px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+/* END FOOTER */
+
+
+/* LOGIN */
+section#login {
+    background-color: #eee;
+    height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    padding-right: calc(1.5rem * 0.5);
+    padding-left: calc(1.5rem * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 8px;
+    height: auto;
+    width: 940px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 8px 0 0 8px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.content-login {
+    padding: 48px;
+    width: 500px;
+}
+
+.error-pass {
+    background-color: #F8D7DA;
+    padding: 12px;
+    border-radius: 5px;
+    border: 0.5px solid #F5C2C7;
+    color: #93205C;
+    margin-bottom: 10px;
+}
+
+.login-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-title.span {
+    margin-bottom: 20px;
+}
+.login-title.h5 {
+    margin-bottom: 30px;
+}
+
+.login-title span {
+    position: static;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.login-title h5 {
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.box-login  {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.input-wrapper {
+    position: relative;
+    margin: 20px auto;
+}
+
+.form-control {
+    display: block;
+    line-height: 2em;
+    margin: 0;
+    padding-left: 10px !important;
+    width: 100%;
+    font-size: medium;
+    border: 1px solid #f4f4f4;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border: 1px solid #2c7ac9;
+}
+
+.control-label {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    bottom: 1.9rem;
+    color: #5d5d5d;
+    transition: 0.2s ease-in-out transform;
+    font-size: 12px;
+}
+
+.form-control:placeholder-shown + .control-label {
+    visibility: hidden;
+    z-index: -1;
+    transition: 0.2s ease-in-out;
+}
+  
+.form-control:not(:placeholder-shown) + .control-label,
+.form-control:focus:not(:placeholder-shown) + .control-label {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+    transform: translateY(-1px);
+    transition: 0.2s ease-in-out transform;
+}
+
+.btn-login {
+    transition: 0.2s;
+    background-color: #212529;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 7px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+}
+.btn-login:hover {
+    transition: 0.2s;
+    background-color: #353b41;
+}
+
+.regis {
+    color: #393f81;
+}
+.text-regis {
+    padding: 22px 0;
+}
+
+.text-muted {
+    font-size: 14px;
+    color: #6C757D;
+}
+/* END LOGIN */
+
+
+/* REGISTER */
+section#register {
+    background-color: #eee;
+    height: 120vh;
+    padding: 40px 0;
+}
+
+.regis-container {
+    width: 500px;
+    padding-right: calc(1.5rem * 0.5);
+    padding-left: calc(1.5rem * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card-body-register {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.card-regis-img img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-content-regis {
+    display: flex;
+    align-items: center;
+}
+
+.content-regis {
+    padding: 48px;
+}
+
+.box-register  {
+    width: 400px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.regis {
+    color: #393f81;
+}
+.text-login {
+    padding-top: 18px;
+}
+/* END REGISTER */
+
+
+/* RESPONSIVE */
+/* Responsive Tablet */
+@media (max-width: 840px) {
+
+    /* HEADER */
+    .header-container {
+        padding: 20px;
+    }
+
+    .header-item-left h1 {
+        padding-top: 0;
+    }
+    
+    .header-item-left p {
+        padding-right: 0;
+    }
+
+    .header-item-right {
+        flex: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .img-gif {
+        height: 28vh;
+    }
+}
